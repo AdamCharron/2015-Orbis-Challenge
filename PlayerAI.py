@@ -1,6 +1,8 @@
 from PythonClientAPI.libs.Game.Enums import *
 from PythonClientAPI.libs.Game.MapOutOfBoundsException import *
 
+# Submitted what was written by the challenge's deadline
+
 '''
     In static_array:
     0 - empty
