@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Game &mdash; The Orbis Challenge 2015 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="The Orbis Challenge 2015 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="Controlling your Player" href="controls.html"/>
+        <link rel="prev" title="Command Line Arguments" href="commands.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> The Orbis Challenge 2015
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="quick.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#before-you-start-set-up">Before you start (Set Up)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#java-required">Java (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#python-optional-only-if-you-want-to-program-your-ai-in-python">Python (Optional - only if you want to program your AI in Python)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#running-the-game-with-the-sample-ai">Running the Game with the sample AI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#linux-mac">Linux/Mac</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#available-resources">Available Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="javaide.html">Configuring your IDE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#eclipse-recommended">Eclipse (recommended)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#set-up">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#starting-game">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#intellij">IntelliJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id1">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id2">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#bluej">BlueJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id3">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id4">Starting Game</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Command Line Arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-the-server">Starting the Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#how-to-configure-the-game-server">How to Configure the Game Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-a-client">Starting a Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-two-ais">Starting Two AIs</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">The Game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#game-overview">Game Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#game-objective">Game Objective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turns">Turns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#end-game">End Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#map-items-power-ups">Map Items &amp; Power-ups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#board-layout">Board Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#walls">Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#players">Players</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shooting">Shooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turrets">Turrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#power-ups">Power-ups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#power-up-laser">Power-up: Laser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#power-up-shield">Power-up: Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#power-up-teleport">Power-up: Teleport</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controls.html">Controlling Your Player</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#human-players">Human Players</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-1-controls">Player 1 Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-2-controls">Player 2 Controls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#ai-players">AI Players</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">How the Competition is Structured</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#submissions">Submissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#grading-scheme">Grading Scheme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#outcome-score">Outcome score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#bonus-score">Bonus score</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#hitting-the-opponent">Hitting the opponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#killing-a-turret">Killing a turret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#collecting-a-power-up">Collecting a power up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#remaining-time-bonus">Remaining Time Bonus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#travel-bonus-per-square">Travel Bonus Per Square</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#competition-format">Competition Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#settings">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#qualifying">Qualifying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#round-robin-finals">Round Robin Finals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#algorithm-and-code-review">Algorithm and Code Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#presentations">Presentations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replay System</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="javaapi.html">Java API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">The Orbis Challenge 2015</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>The Game</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/game.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="the-game">
+<h1>The Game<a class="headerlink" href="#the-game" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<img alt="_images/intro.png" src="_images/intro.png" />
+</div>
+<p><em>Above is a screenshot of a game in progress</em></p>
+<div class="section" id="game-overview">
+<h2>Game Overview<a class="headerlink" href="#game-overview" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="game-objective">
+<h3>Game Objective<a class="headerlink" href="#game-objective" title="Permalink to this headline">¶</a></h3>
+<p>The main objective is to collect the most amount of points without being killed. The game ends when a player reaches 0 HP or the game hits the limit number of turns. Please note that in the grading and competition format the score will be used to determine the strength of the AI. For more information on grading, take a look at: <a class="reference internal" href="challenge.html"><em>How the Competition is Structured</em></a></p>
+</div>
+<div class="section" id="turns">
+<h3>Turns<a class="headerlink" href="#turns" title="Permalink to this headline">¶</a></h3>
+<p>The game is played in a series of turns. Each turn, you may either rotate to face a direction, shoot, use a power-up, move forward or do nothing.
+If you do not make a move within the time limit, you do nothing for a turn (stay still).
+The turn counter will iterate and the game will end once the max number of turns per player has been reached set by the game.</p>
+</div>
+<div class="section" id="end-game">
+<h3>End Game<a class="headerlink" href="#end-game" title="Permalink to this headline">¶</a></h3>
+<p>The game ends when a player reaches 0 HP (health). If both players die on the same turn or the game reaches the maximum number of turns, the game ends and the player with the higher number of points is the victor. The final scores are then tallied up.</p>
+</div>
+</div>
+<div class="section" id="map-items-power-ups">
+<h2>Map Items &amp; Power-ups<a class="headerlink" href="#map-items-power-ups" title="Permalink to this headline">¶</a></h2>
+<p>There are various things that can appear on the map which each item may or may not be on the map. The top left corner is (0,0).</p>
+<div class="section" id="board-layout">
+<h3>Board Layout<a class="headerlink" href="#board-layout" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="_images/walls.png" src="_images/walls.png" />
+</div>
+<p>All boards are created symmetrically and wrap around to the other side in various sizes. Each level will have a different amount of walls, power-ups, teleport locations and starting locations for each players. Maps are located under the folder <em>Resources/Maps</em> in JSON format if you wish to test your AI out or edit some maps.</p>
+<p>Wrap around means if you were to move off the board on one end, you&#8217;d appear on the other end facing the same direction. For example, if the board was a square board of size 3, if you are to go up from (0,0), you&#8217;ll show up on (0,2).</p>
+</div>
+<div class="section" id="walls">
+<h3>Walls<a class="headerlink" href="#walls" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="_images/Wall.png" src="_images/Wall.png" />
+</div>
+<p>A wall acts as a barrier such that neither players, bullets nor lasers can move through it. Walls cannot be destroyed.</p>
+</div>
+<div class="section" id="players">
+<h3>Players<a class="headerlink" href="#players" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="_images/player1.png" src="_images/player1.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/player2.png" src="_images/player2.png" />
+</div>
+<p><em>From left to right the players states are: Regular, Hit, Shielded. Note that player 1 is orange and player 2 is blue</em></p>
+<p>Players on a turn will be facing a direction and are not allowed to move onto an already occupied square.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In a case where both players wish to move onto the same square, both players&#8217; moves are cancelled. This is also the case if both players wish the teleport onto the same square. Additionally, if a player attempts to move onto a square occupied in the next turn by a player, wall, or turret the move is cancelled.</p>
+</div>
+</div>
+<div class="section" id="shooting">
+<h3>Shooting<a class="headerlink" href="#shooting" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="_images/Shooting.png" src="_images/Shooting.png" />
+</div>
+<p><em>Player 1 Shooting</em></p>
+<p>On any turn, a player can shoot. When shooting, the bullet starts on the square directly ahead of the player and will travel in the direction the player is currently facing. Bullets move 1 space per turn. All bullets travel indefinitely until they hit either a player, turret, or wall. Bullets, like players, wrap around the map.</p>
+</div>
+<div class="section" id="turrets">
+<h3>Turrets<a class="headerlink" href="#turrets" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left">
+<img alt="_images/TurretAlive.png" src="_images/TurretAlive.png" />
+</div>
+<div class="figure">
+<img alt="_images/TurretDead.png" src="_images/TurretDead.png" />
+</div>
+<p><em>Left: Live Turret, Right: Disabled Turret</em></p>
+<div class="figure align-left">
+<img alt="_images/LaserMap.png" src="_images/LaserMap.png" />
+</div>
+<p><em>Above: Turrets firing</em></p>
+<p>Turrets are placed on the map and fire in a pre-set pattern. Turrets also act as a wall such neither players, lasers, nor bullets can go through it. Turrets, when firing, will behave the same as a player activating a laser power-up (<em>see below for explanation of the laser power-up</em>). Each turret has 1 HP and is deactivated once shot by a player and the turret will no longer fire.</p>
+<p>A turret will always fire after the initialization turn (as in on the first turn) unless it has 0 fire time (length of time the turret fires for). As a pattern, all turrets will fire for its specified fire time, and then cool down for its specified cooldown time (the length of time between fire). Take, for example, a turret with 2 turns of fire time and 4 turns of cooldown time. This turret will fire on the first and second turn. It will then go onto cooldown for 4 turns, during which it will not fire. On the on the 7th turn it will fire again, repeating the same pattern of 2 turns shooting, 4 turns cooling down.</p>
+</div>
+<div class="section" id="power-ups">
+<h3>Power-ups<a class="headerlink" href="#power-ups" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="_images/powerup.png" src="_images/powerup.png" />
+</div>
+<p><em>From left to right: Laser, Shield, Teleport</em></p>
+<p>The 3 available power-ups are pictured above. Their contents and how they work are explained in detail below. To pick a power-up, you move onto the square on which it is located on. Once a power-up is picked up, it will disappear from the map and move into the relevant player&#8217;s inventory. A player may hold multiple power-ups and multiple of the same power-ups.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A power-up is not used the moment it is collected but instead it goes to the player&#8217;s inventory. To use a power-up, you must activate it on one of your turns. Power-ups are consumables meaning that once used, they cannot be used again unless a new power-up is collected.</p>
+</div>
+<div class="section" id="power-up-laser">
+<h4>Power-up: Laser<a class="headerlink" href="#power-up-laser" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<img alt="_images/laser.png" src="_images/laser.png" />
+</div>
+<div class="figure">
+<img alt="_images/PlayerLaser.png" src="_images/PlayerLaser.png" />
+</div>
+<p><em>Above, player 1 is using a laser and what the laser power-up appears as</em></p>
+<p>When a laser power-up is activated, the squares in each of the 4 directions (up, down, left, right) for 4 squares are instantly hit. If a wall, turret, or a player is hit along the way by a laser, it will block the laser from continuing in that direction and the laser will be stopped in that direction. If a laser hits a player, they will lose an HP. If a laser hits a turret, it will disable the turret. Lasers, like bullets and players, wrap around the map.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If a laser hits a player with a shield on, the laser is reflected at the shooter causing the shooter (turret or opponent), to lose an HP.</p>
+</div>
+</div>
+<div class="section" id="power-up-shield">
+<h4>Power-up: Shield<a class="headerlink" href="#power-up-shield" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<img alt="_images/Shield.png" src="_images/Shield.png" />
+</div>
+<p>A shield protects your player from damage for a turn and expires in 5 turns. If a shield blocks damage, the shield expires immediately the next turn. You can take multiple hits on the same turn.</p>
+<p>Additionally, if you are hit by a laser while your shield is activated, the damage is reflected back at the shooter. If the user was a turret, you will kill the turret. If it was your opponent, it will cause the opponent to lose 1 HP (unless they too have a shield on in which case neither of you lose HP).</p>
+</div>
+<div class="section" id="power-up-teleport">
+<h4>Power-up: Teleport<a class="headerlink" href="#power-up-teleport" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-left">
+<img alt="_images/Teleport.png" src="_images/Teleport.png" />
+</div>
+<div class="figure">
+<img alt="_images/TeleportPad.png" src="_images/TeleportPad.png" />
+</div>
+<p><em>Left: teleport power-up to collect. Right: teleport pad to teleport onto</em></p>
+<p>Per move, a player with a teleport power-up may move onto one of the teleport pads. Each teleport pad is identified by a number that is then used by an AI to choose a teleport pad location.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your power-up is still consumed even if the you were unable to teleport onto your selected square (i.e your opponent was occupying the square)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Q</strong>: <em>What if a player tries to use a power-up which it doesn&#8217;t have?</em></li>
+</ul>
+<p><strong>A</strong>: The move is processed as invalid and the player will do nothing.</p>
+<ul class="simple">
+<li><strong>Q</strong>: <em>Can I run into my opponent?</em></li>
+</ul>
+<p><strong>A</strong>: No, you cannot. In the case you attempt to occupy a square your opponent is still on, your move is cancelled and you stay still for a turn.</p>
+<ul class="simple">
+<li><strong>Q</strong>: <em>What if both players have shields on and both shoot each other with a laser?</em></li>
+</ul>
+<p><strong>A</strong>: In the rare case in that happens, both players take no damage, both of their shields are used up this turn, and they both get points for hitting each other from the reflection of the shield.</p>
+<ul class="simple">
+<li><strong>Q</strong>: <em>What happens when the game reaches max turn?</em></li>
+</ul>
+<p><strong>A</strong>: The game terminates and tally ups the final score.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="controls.html" class="btn btn-neutral float-right" title="Controlling your Player" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="commands.html" class="btn btn-neutral" title="Command Line Arguments" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Orbis Investment Management Limited..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

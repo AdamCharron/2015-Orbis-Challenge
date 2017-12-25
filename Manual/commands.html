@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command Line Arguments &mdash; The Orbis Challenge 2015 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="The Orbis Challenge 2015 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="The Game" href="game.html"/>
+        <link rel="prev" title="Setting up your IDE" href="javaide.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> The Orbis Challenge 2015
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#before-you-start-set-up">Before you start (Set Up)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#java-required">Java (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#python-optional-only-if-you-want-to-program-your-ai-in-python">Python (Optional - only if you want to program your AI in Python)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#running-the-game-with-the-sample-ai">Running the Game with the sample AI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#linux-mac">Linux/Mac</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#available-resources">Available Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="javaide.html">Configuring your IDE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#eclipse-recommended">Eclipse (recommended)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#set-up">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#starting-game">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#intellij">IntelliJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id1">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id2">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#bluej">BlueJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id3">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id4">Starting Game</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Command Line Arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-the-server">Starting the Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-configure-the-game-server">How to Configure the Game Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starting-a-client">Starting a Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starting-two-ais">Starting Two AIs</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="game.html">The Game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="game.html#game-overview">Game Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#game-objective">Game Objective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turns">Turns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#end-game">End Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#map-items-power-ups">Map Items &amp; Power-ups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#board-layout">Board Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#walls">Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#players">Players</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#shooting">Shooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turrets">Turrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#power-ups">Power-ups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-laser">Power-up: Laser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-shield">Power-up: Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-teleport">Power-up: Teleport</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controls.html">Controlling Your Player</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#human-players">Human Players</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-1-controls">Player 1 Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-2-controls">Player 2 Controls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#ai-players">AI Players</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">How the Competition is Structured</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#submissions">Submissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#grading-scheme">Grading Scheme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#outcome-score">Outcome score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#bonus-score">Bonus score</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#hitting-the-opponent">Hitting the opponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#killing-a-turret">Killing a turret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#collecting-a-power-up">Collecting a power up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#remaining-time-bonus">Remaining Time Bonus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#travel-bonus-per-square">Travel Bonus Per Square</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#competition-format">Competition Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#settings">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#qualifying">Qualifying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#round-robin-finals">Round Robin Finals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#algorithm-and-code-review">Algorithm and Code Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#presentations">Presentations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replay System</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="javaapi.html">Java API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">The Orbis Challenge 2015</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Command Line Arguments</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/commands.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="command-line-arguments">
+<h1>Command Line Arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline">¶</a></h1>
+<p>The game is set up into two parts. There is the server, which hosts the game, and the clients, in which runs the AI players.</p>
+<div class="section" id="starting-the-server">
+<span id="sserver"></span><h2>Starting the Server<a class="headerlink" href="#starting-the-server" title="Permalink to this headline">¶</a></h2>
+<p>To run the game server, open up terminal or a command line window. Navigate to the extracted devkit folder.</p>
+<p>If you are running Windows, navigate to your development kit directory and type in:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">runserver</span><span class="o">.</span><span class="n">bat</span>
+</pre></div>
+</div>
+<p>Otherwise, type in</p>
+<div class="highlight-bash"><div class="highlight"><pre>bash runserver.sh
+</pre></div>
+</div>
+<p>This will start the game up in the settings of settings.json or default settings if no settings file exist.</p>
+</div>
+<div class="section" id="how-to-configure-the-game-server">
+<span id="args"></span><h2>How to Configure the Game Server<a class="headerlink" href="#how-to-configure-the-game-server" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways to configure the game, either by changing the values in the <strong>Resources/settings.json</strong> file, or by setting options through the <strong>command line</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>settings.json can be edited using a text editor.</li>
+<li>Values passed in through the command line overrides settings.json configures during runtime. That is, if option A is set as 1 in the properties file and -1 through the command line, the game will set option A to -1.</li>
+<li>Default values are used when no properties file and no command line arguments are present or invalid.</li>
+</ul>
+</div>
+<p><strong>Scroll to the right of the table to see further descriptions for each argument.</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="13%" />
+<col width="10%" />
+<col width="17%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command line</th>
+<th class="head">Properties key</th>
+<th class="head">Default Values</th>
+<th class="head">Possible values</th>
+<th class="head">What it does</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>-n</td>
+<td>numberOfAIPlayers</td>
+<td>0</td>
+<td>0,1,2</td>
+<td>Sets the number of players that are AIs. 0 would mean 2 human players</td>
+</tr>
+<tr class="row-odd"><td>-go</td>
+<td>renderGUI</td>
+<td>true</td>
+<td>true, false in JSON.
+GUI is off if present
+in command line</td>
+<td>If the flag is present, the GUI is disabled.
+When GUI is off, the board is printed to the console instead.</td>
+</tr>
+<tr class="row-even"><td>-map</td>
+<td>mapName</td>
+<td>SimpleMap1.json</td>
+<td>SimpleMap1.json, Map1.json</td>
+<td>The map to use for the game.
+The map used for grading will be different from these.
+The format of these maps are in JSON so feel free to change the maps or make new ones!</td>
+</tr>
+<tr class="row-odd"><td>-s</td>
+<td>swapAIPlayers</td>
+<td>false</td>
+<td>true, false</td>
+<td>AI by default is player 1.
+When set to true, human controls player 1 and AI becomes player 2.</td>
+</tr>
+<tr class="row-even"><td>-rt</td>
+<td>maxResponseTime</td>
+<td>250</td>
+<td>integer</td>
+<td>The allowed response time in ms for AI players before their turn is skipped.
+A NONE move is returned recorded in it&#8217;s place for timeout.</td>
+</tr>
+<tr class="row-odd"><td>-d</td>
+<td>keyboardDelay</td>
+<td>300</td>
+<td>integer</td>
+<td>The keyboard delay for human players in ms before their move is skipped.
+A NONE move is returned recorded in it&#8217;s place for timeout.</td>
+</tr>
+<tr class="row-even"><td>-t</td>
+<td>serverTimeout</td>
+<td>20000</td>
+<td>integer</td>
+<td>How long the server waits until it gives up waiting for client in ms</td>
+</tr>
+<tr class="row-odd"><td>-p</td>
+<td>portNumber</td>
+<td>4461</td>
+<td>integer</td>
+<td>The port number the server uses to for clients to bind to
+NOTE: If the server and client have different port numbers, the game will not start!</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To change the client port, specify -p followed by port number. -p is the only supported flag for clients.</p>
+</div>
+<p><strong>Example</strong>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>runserver.bat -p <span class="m">19999</span> -map SimpleMap1.json
+</pre></div>
+</div>
+</div>
+<div class="section" id="starting-a-client">
+<span id="sclient"></span><h2>Starting a Client<a class="headerlink" href="#starting-a-client" title="Permalink to this headline">¶</a></h2>
+<p>Once the server is started, the server will wait for an incoming connection from a client.</p>
+<p>To start the client, you need to provide the <em>host</em> and <em>port</em> of the server that you wish to connect to</p>
+<p>The port used will either be the default port <strong>4461</strong> or whatever you have changed it to, either through the command line or set through the settings.json file.</p>
+<p>Open a new command prompt or terminal and move into the directory where you have the runclient scripts.</p>
+<p>On Windows, type the following to start a client</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># JAVA</span>
+compile.bat
+runclient.bat
+
+<span class="c"># PYTHON</span>
+py -3 RunPythonClient.py
+OR
+runclient
+</pre></div>
+</div>
+<p>On OSX or Linux machines, type the following to start a client</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># JAVA</span>
+bash compile.sh
+bash runclient.sh
+
+<span class="c"># PYTHON</span>
+python3 RunPythonClient.py
+OR
+bash runclient.sh
+</pre></div>
+</div>
+<p>Make sure the runclient script you are using came from the devkit for the language you are writing for.</p>
+</div>
+<div class="section" id="starting-two-ais">
+<h2>Starting Two AIs<a class="headerlink" href="#starting-two-ais" title="Permalink to this headline">¶</a></h2>
+<p>If you want to have two AIs play against each other, or one AI play itself, open up two terminal windows. Navigate to the respective directories of the AIs that will be playing each other. Now follow the above steps for starting a client twice (the above steps). Voila!</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="game.html" class="btn btn-neutral float-right" title="The Game" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="javaide.html" class="btn btn-neutral" title="Setting up your IDE" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Orbis Investment Management Limited..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

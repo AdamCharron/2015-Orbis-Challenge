@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Controlling your Player &mdash; The Orbis Challenge 2015 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="The Orbis Challenge 2015 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="How the Competition is Structured" href="challenge.html"/>
+        <link rel="prev" title="The Game" href="game.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> The Orbis Challenge 2015
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="quick.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#before-you-start-set-up">Before you start (Set Up)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#java-required">Java (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#python-optional-only-if-you-want-to-program-your-ai-in-python">Python (Optional - only if you want to program your AI in Python)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#running-the-game-with-the-sample-ai">Running the Game with the sample AI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#linux-mac">Linux/Mac</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#available-resources">Available Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="javaide.html">Configuring your IDE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#eclipse-recommended">Eclipse (recommended)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#set-up">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#starting-game">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#intellij">IntelliJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id1">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id2">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#bluej">BlueJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id3">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id4">Starting Game</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Command Line Arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-the-server">Starting the Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#how-to-configure-the-game-server">How to Configure the Game Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-a-client">Starting a Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-two-ais">Starting Two AIs</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="game.html">The Game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="game.html#game-overview">Game Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#game-objective">Game Objective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turns">Turns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#end-game">End Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#map-items-power-ups">Map Items &amp; Power-ups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#board-layout">Board Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#walls">Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#players">Players</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#shooting">Shooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turrets">Turrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#power-ups">Power-ups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-laser">Power-up: Laser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-shield">Power-up: Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-teleport">Power-up: Teleport</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Controlling Your Player</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#human-players">Human Players</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#player-1-controls">Player 1 Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#player-2-controls">Player 2 Controls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ai-players">AI Players</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">How the Competition is Structured</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#submissions">Submissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#grading-scheme">Grading Scheme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#outcome-score">Outcome score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#bonus-score">Bonus score</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#hitting-the-opponent">Hitting the opponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#killing-a-turret">Killing a turret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#collecting-a-power-up">Collecting a power up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#remaining-time-bonus">Remaining Time Bonus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#travel-bonus-per-square">Travel Bonus Per Square</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#competition-format">Competition Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#settings">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#qualifying">Qualifying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#round-robin-finals">Round Robin Finals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#algorithm-and-code-review">Algorithm and Code Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#presentations">Presentations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replay System</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="javaapi.html">Java API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">The Orbis Challenge 2015</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Controlling your Player</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/controls.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="controlling-your-player">
+<h1>Controlling your Player<a class="headerlink" href="#controlling-your-player" title="Permalink to this headline">¶</a></h1>
+<p>You know how the game works, but how do you make your player move?</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="55%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>P</strong></td>
+<td>Pause</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="human-players">
+<h2>Human Players<a class="headerlink" href="#human-players" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="player-1-controls">
+<h3>Player 1 Controls<a class="headerlink" href="#player-1-controls" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>KEY</strong></td>
+<td><strong>ACTION</strong></td>
+</tr>
+<tr class="row-even"><td><strong>W</strong></td>
+<td>Up</td>
+</tr>
+<tr class="row-odd"><td><strong>A</strong></td>
+<td>Left</td>
+</tr>
+<tr class="row-even"><td><strong>S</strong></td>
+<td>Down</td>
+</tr>
+<tr class="row-odd"><td><strong>D</strong></td>
+<td>Right</td>
+</tr>
+<tr class="row-even"><td><strong>Q</strong></td>
+<td>Laser</td>
+</tr>
+<tr class="row-odd"><td><strong>E</strong></td>
+<td>Shield</td>
+</tr>
+<tr class="row-even"><td><strong>Spacebar</strong></td>
+<td>Shoot</td>
+</tr>
+<tr class="row-odd"><td><strong>1</strong></td>
+<td>Teleport to 1st teleport pad</td>
+</tr>
+<tr class="row-even"><td><strong>2</strong></td>
+<td>Teleport to 2nd teleport pad</td>
+</tr>
+<tr class="row-odd"><td><strong>3</strong></td>
+<td>Teleport to 3rd teleport pad</td>
+</tr>
+<tr class="row-even"><td><strong>4</strong></td>
+<td>Teleport to 4th teleport pad</td>
+</tr>
+<tr class="row-odd"><td><strong>5</strong></td>
+<td>Teleport to 5th teleport pad</td>
+</tr>
+<tr class="row-even"><td><strong>6</strong></td>
+<td>Teleport to 6th teleport pad</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="player-2-controls">
+<h3>Player 2 Controls<a class="headerlink" href="#player-2-controls" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>KEY</strong></td>
+<td><strong>ACTION</strong></td>
+</tr>
+<tr class="row-even"><td><strong>Up Key</strong></td>
+<td>Up</td>
+</tr>
+<tr class="row-odd"><td><strong>Left Key</strong></td>
+<td>Left</td>
+</tr>
+<tr class="row-even"><td><strong>Down Key</strong></td>
+<td>Down</td>
+</tr>
+<tr class="row-odd"><td><strong>Right Key</strong></td>
+<td>Right</td>
+</tr>
+<tr class="row-even"><td><strong>Enter</strong></td>
+<td>Shoot</td>
+</tr>
+<tr class="row-odd"><td><strong>,</strong></td>
+<td>Laser</td>
+</tr>
+<tr class="row-even"><td><strong>.</strong></td>
+<td>Shield</td>
+</tr>
+<tr class="row-odd"><td><strong>J</strong></td>
+<td>Teleport to 1st teleport pad</td>
+</tr>
+<tr class="row-even"><td><strong>K</strong></td>
+<td>Teleport to 2nd teleport pad</td>
+</tr>
+<tr class="row-odd"><td><strong>L</strong></td>
+<td>Teleport to 3rd teleport pad</td>
+</tr>
+<tr class="row-even"><td><strong>U</strong></td>
+<td>Teleport to 4th teleport pad</td>
+</tr>
+<tr class="row-odd"><td><strong>I</strong></td>
+<td>Teleport to 5th teleport pad</td>
+</tr>
+<tr class="row-even"><td><strong>O</strong></td>
+<td>Teleport to 6th teleport pad</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="ai-players">
+<h2>AI Players<a class="headerlink" href="#ai-players" title="Permalink to this headline">¶</a></h2>
+<p>For bots that are controlled by an AI, it will move based on the move instructions sent to them by said AI.</p>
+<p>The valid values for a move instructions are listed below.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All these moves are prepended with &#8220;<em>Move.</em>&#8221; because they are declared as enums</p>
+</div>
+<div class="highlight-java"><div class="highlight"><pre><span class="cm">/**</span>
+<span class="cm"> * Turn to face up.</span>
+<span class="cm"> */</span>
+<span class="n">FACE_UP</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Turn to face down.</span>
+<span class="cm">*/</span>
+<span class="n">FACE_DOWN</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Turn to face to the left.</span>
+<span class="cm">*/</span>
+<span class="n">FACE_LEFT</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Turn to face to the right.</span>
+<span class="cm">*/</span>
+<span class="n">FACE_RIGHT</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Do nothing.</span>
+<span class="cm">*/</span>
+<span class="n">NONE</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Shoot in the direction you&#39;re facing.</span>
+<span class="cm">*/</span>
+<span class="n">SHOOT</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Move forward in the direction you&#39;re facing.</span>
+<span class="cm">*/</span>
+<span class="n">FORWARD</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Use shield power up if possible, does nothing if no shield</span>
+<span class="cm">* power up.</span>
+<span class="cm">*</span>
+<span class="cm">* This shield lasts for 5 turns.</span>
+<span class="cm">*/</span>
+<span class="n">SHIELD</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Use laser power up if possible, does nothing if no laser power</span>
+<span class="cm">* up.</span>
+<span class="cm">*</span>
+<span class="cm">* The laser fires in all direction for 4 squares, stops short on a</span>
+<span class="cm">* wall, turret or player.</span>
+<span class="cm">*/</span>
+<span class="n">LASER</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Teleport to teleport location 0 if possible, does nothing if</span>
+<span class="cm">* no teleport power up or the teleport location doesn&#39;t exist.</span>
+<span class="cm">*/</span>
+<span class="n">TELEPORT_0</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Teleport to teleport location 1 if possible, does nothing if</span>
+<span class="cm">* no teleport power up or the teleport location doesn&#39;t exist.</span>
+<span class="cm">*/</span>
+<span class="n">TELEPORT_1</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Teleport to teleport location 2 if possible, does nothing if</span>
+<span class="cm">* no teleport power up or the teleport location doesn&#39;t exist.</span>
+<span class="cm">*/</span>
+<span class="n">TELEPORT_2</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Teleport to teleport location 3 if possible, does nothing if</span>
+<span class="cm">* no teleport power up or the teleport location doesn&#39;t exist.</span>
+<span class="cm">*/</span>
+<span class="n">TELEPORT_3</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Teleport to teleport location 4 if possible, does nothing if</span>
+<span class="cm">* no teleport power up or the teleport location doesn&#39;t exist.</span>
+<span class="cm">*/</span>
+<span class="n">TELEPORT_4</span><span class="o">,</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Teleport to teleport location 5 if possible, does nothing if</span>
+<span class="cm">* no teleport power up or the teleport location doesn&#39;t exist.</span>
+<span class="cm">*/</span>
+<span class="n">TELEPORT_5</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>The move instructions are executed if they are valid moves. Valid moves are defined to be moves that follow the game rules.  For more information, please look at <a class="reference internal" href="game.html"><em>The Game</em></a>.</p>
+<p>Once the AI has sent a move instruction for a given turn, there is no way to change the move instruction.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Please note that there is a 250ms time limit for getMove to return.</p>
+<p class="last">If you are trying to search the entire board, this could be an issue on the larger 21x21 maps.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="challenge.html" class="btn btn-neutral float-right" title="How the Competition is Structured" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="game.html" class="btn btn-neutral" title="The Game" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Orbis Investment Management Limited..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,513 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Setting up your IDE &mdash; The Orbis Challenge 2015 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="The Orbis Challenge 2015 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="Command Line Arguments" href="commands.html"/>
+        <link rel="prev" title="Quick Start Guide" href="quick.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> The Orbis Challenge 2015
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#before-you-start-set-up">Before you start (Set Up)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#java-required">Java (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#python-optional-only-if-you-want-to-program-your-ai-in-python">Python (Optional - only if you want to program your AI in Python)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#running-the-game-with-the-sample-ai">Running the Game with the sample AI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#linux-mac">Linux/Mac</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#available-resources">Available Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Configuring your IDE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eclipse-recommended">Eclipse (recommended)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set-up">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#starting-game">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#intellij">IntelliJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bluej">BlueJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Starting Game</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Command Line Arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-the-server">Starting the Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#how-to-configure-the-game-server">How to Configure the Game Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-a-client">Starting a Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-two-ais">Starting Two AIs</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="game.html">The Game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="game.html#game-overview">Game Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#game-objective">Game Objective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turns">Turns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#end-game">End Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#map-items-power-ups">Map Items &amp; Power-ups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#board-layout">Board Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#walls">Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#players">Players</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#shooting">Shooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turrets">Turrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#power-ups">Power-ups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-laser">Power-up: Laser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-shield">Power-up: Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-teleport">Power-up: Teleport</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controls.html">Controlling Your Player</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#human-players">Human Players</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-1-controls">Player 1 Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-2-controls">Player 2 Controls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#ai-players">AI Players</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">How the Competition is Structured</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#submissions">Submissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#grading-scheme">Grading Scheme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#outcome-score">Outcome score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#bonus-score">Bonus score</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#hitting-the-opponent">Hitting the opponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#killing-a-turret">Killing a turret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#collecting-a-power-up">Collecting a power up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#remaining-time-bonus">Remaining Time Bonus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#travel-bonus-per-square">Travel Bonus Per Square</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#competition-format">Competition Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#settings">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#qualifying">Qualifying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#round-robin-finals">Round Robin Finals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#algorithm-and-code-review">Algorithm and Code Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#presentations">Presentations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replay System</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="javaapi.html">Java API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">The Orbis Challenge 2015</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Setting up your IDE</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/javaide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="setting-up-your-ide">
+<h1>Setting up your IDE<a class="headerlink" href="#setting-up-your-ide" title="Permalink to this headline">¶</a></h1>
+<p>An IDE can help with coding. 3 IDEs are demonstrated: Eclipse (recommended), IntelliJ, and BlueJ.</p>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>To start the game, navigate to your development kit Folder and open the 3 batch file on Windows or 3 shell files on linux in the order given below. You can also call these in command line and pass parameters through them.
+Write your AI in PlayerAI.py</p>
+<blockquote>
+<div><img alt="_images/IntelliJ10.png" class="align-center" src="_images/IntelliJ10.png" />
+</div></blockquote>
+</div>
+<div class="section" id="eclipse-recommended">
+<h2>Eclipse (recommended)<a class="headerlink" href="#eclipse-recommended" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="set-up">
+<h3>Set Up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Set up a workspace.</li>
+</ol>
+<img alt="_images/Eclipse1.png" class="align-center" src="_images/Eclipse1.png" />
+<ol class="arabic simple" start="2">
+<li>Set up a new project under <em>File</em> -&gt; <em>New</em> -&gt; <em>Java Project</em>.</li>
+</ol>
+<img alt="_images/Eclipse2.png" class="align-center" src="_images/Eclipse2.png" />
+<ol class="arabic simple" start="3">
+<li>Name your project and hit next.</li>
+</ol>
+<img alt="_images/Eclipse3.png" class="align-center" src="_images/Eclipse3.png" />
+<ol class="arabic simple" start="4">
+<li>Check on <em>Allow output folder for source folders</em> then hit <em>Libraries</em>.</li>
+</ol>
+<img alt="_images/Eclipse4.png" class="align-center" src="_images/Eclipse4.png" />
+<ol class="arabic simple" start="5">
+<li>Click <em>Add External JARs</em>.</li>
+</ol>
+<img alt="_images/Eclipse5.png" class="align-center" src="_images/Eclipse5.png" />
+<ol class="arabic simple" start="6">
+<li>Navigate to the Java Library Folder and add both libraries.</li>
+</ol>
+<img alt="_images/Eclipse6.png" class="align-center" src="_images/Eclipse6.png" />
+<ol class="arabic simple" start="7">
+<li>Close the Welcome Menu.</li>
+</ol>
+<img alt="_images/Eclipse7.png" class="align-center" src="_images/Eclipse7.png" />
+<ol class="arabic simple" start="8">
+<li>Copy all the files in the <em>Java</em> folder into the project.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/Eclipse8.png" class="align-center" src="_images/Eclipse8.png" />
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li>Drag <em>PlayerAI.java</em> from <em>botplayer</em> into src. Your eclipse should look like the below picture.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/Eclipse9.png" class="align-center" src="_images/Eclipse9.png" />
+</div></blockquote>
+<ol class="arabic simple" start="10">
+<li>Start coding in PlayerAI.java</li>
+</ol>
+</div>
+<div class="section" id="starting-game">
+<h3>Starting Game<a class="headerlink" href="#starting-game" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>To start a game, right click <em>BotRampage.jar</em> under <em>Referenced Libraries</em>. Go to <em>Run As</em> and click <em>Java Application</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/Eclipse10.png" class="align-center" src="_images/Eclipse10.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Select <em>RunGame - com.orbischallenge.main</em> as the main class to run. A window will pop up.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/Eclipse11.png" class="align-center" src="_images/Eclipse11.png" />
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Right click <em>RunClient.jar</em> under <em>Referenced Libraries</em>. Go to <em>Run As</em> and click <em>Java Application</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/Eclipse12.png" class="align-center" src="_images/Eclipse12.png" />
+</div></blockquote>
+<p>Next Steps: If you need command line options: go to <em>Run Configurations</em> and change arguments to <em>RunGame</em>.</p>
+<blockquote>
+<div><img alt="_images/Eclipse13.png" class="align-center" src="_images/Eclipse13.png" />
+<img alt="_images/Eclipse14.png" class="align-center" src="_images/Eclipse14.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="intellij">
+<h2>IntelliJ<a class="headerlink" href="#intellij" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Set Up<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Click <em>Create New Project</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ1.png" class="align-center" src="_images/IntelliJ1.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Select JDK if needed by clicking <em>New...</em> -&gt; <em>JDK</em> and select the appropriate JDK.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ2.png" class="align-center" src="_images/IntelliJ2.png" />
+<img alt="_images/IntelliJ3.png" class="align-center" src="_images/IntelliJ3.png" />
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>One IntelliJ has detected JDK, click <em>Next</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ4.png" class="align-center" src="_images/IntelliJ4.png" />
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>Name your project and hit <em>Finish</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ5.png" class="align-center" src="_images/IntelliJ5.png" />
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li>Copy all the files in the folder &#8216;Java&#8217; into your project (top level folder) except PlayerAI.class if it exists.
+Drag and drop would work as well as copy and pasting.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ6.png" class="align-center" src="_images/IntelliJ6.png" />
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li>Right click the folder <em>botplayer</em> and go to <em>Mark Directory As</em> and click <em>Sources Root</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ7.png" class="align-center" src="_images/IntelliJ7.png" />
+</div></blockquote>
+<ol class="arabic simple" start="7">
+<li>Go to <em>Java Library</em> and right click <em>BotRampage.jar</em> and click <em>Add as Library</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ8.png" class="align-center" src="_images/IntelliJ8.png" />
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li>Go to <em>Java Library</em> and right click <em>JavaClient.jar</em> and click <em>Add as Library</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ9.png" class="align-center" src="_images/IntelliJ9.png" />
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li>Start coding in PlayerAI.java.</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h3>Starting Game<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>To start the game, navigate to your IntelliJ Project Folder and open the 3 batch file on Windows or 3 shell files on linux in the order given below. You can also call these in command line and pass parameters through them.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ10.png" class="align-center" src="_images/IntelliJ10.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="bluej">
+<h2>BlueJ<a class="headerlink" href="#bluej" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Set Up<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Go to <em>Project</em> and click <em>Open Non BlueJ</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/BlueJ1.png" class="align-center" src="_images/BlueJ1.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Navigate and select the folder <em>botplayer</em> and click <em>open in BlueJ</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/BlueJ2.png" class="align-center" src="_images/BlueJ2.png" />
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Go to <em>Tools</em> and select <em>Preferences</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/BlueJ3.png" class="align-center" src="_images/BlueJ3.png" />
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>Go to the <em>Libraries</em>  tab and click <em>Add</em>.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/BlueJ4.png" class="align-center" src="_images/BlueJ4.png" />
+</div></blockquote>
+<p>5.Open <em>BotRampage.jar</em>.</p>
+<blockquote>
+<div><img alt="_images/BlueJ5.png" class="align-center" src="_images/BlueJ5.png" />
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li>Do the same with <em>JavaClient.jar</em>.</li>
+</ol>
+<img alt="_images/BlueJ6.png" class="align-center" src="_images/BlueJ6.png" />
+<ol class="arabic simple" start="7">
+<li>Click <em>Ok</em> on both windows.</li>
+</ol>
+<img alt="_images/BlueJ7.png" class="align-center" src="_images/BlueJ7.png" />
+<img alt="_images/BlueJ8.png" class="align-center" src="_images/BlueJ8.png" />
+<ol class="arabic simple" start="8">
+<li>Click <em>Tools</em> and Click on <em>Rebuild Package</em>.</li>
+</ol>
+<img alt="_images/BlueJ9.png" class="align-center" src="_images/BlueJ9.png" />
+<ol class="arabic simple" start="9">
+<li>Click <em>Tools</em> and Click on <em>Reset Java Virtual Machine</em>.</li>
+</ol>
+<img alt="_images/BlueJ10.png" class="align-center" src="_images/BlueJ10.png" />
+<ol class="arabic simple" start="10">
+<li>Start coding in PlayerAI.java.</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3>Starting Game<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>To start the game, navigate to your development kit Folder and open the 3 batch file on Windows or 3 shell files on linux in the order given below. You can also call these in command line and pass parameters through them.</li>
+</ol>
+<blockquote>
+<div><img alt="_images/IntelliJ10.png" class="align-center" src="_images/IntelliJ10.png" />
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="commands.html" class="btn btn-neutral float-right" title="Command Line Arguments" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quick.html" class="btn btn-neutral" title="Quick Start Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Orbis Investment Management Limited..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

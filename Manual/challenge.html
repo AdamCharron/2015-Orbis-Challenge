@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How the Competition is Structured &mdash; The Orbis Challenge 2015 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="The Orbis Challenge 2015 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="Replay System" href="replay.html"/>
+        <link rel="prev" title="Controlling your Player" href="controls.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> The Orbis Challenge 2015
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="quick.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#before-you-start-set-up">Before you start (Set Up)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#java-required">Java (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#python-optional-only-if-you-want-to-program-your-ai-in-python">Python (Optional - only if you want to program your AI in Python)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#running-the-game-with-the-sample-ai">Running the Game with the sample AI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#linux-mac">Linux/Mac</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#available-resources">Available Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="javaide.html">Configuring your IDE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#eclipse-recommended">Eclipse (recommended)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#set-up">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#starting-game">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#intellij">IntelliJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id1">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id2">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#bluej">BlueJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id3">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id4">Starting Game</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Command Line Arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-the-server">Starting the Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#how-to-configure-the-game-server">How to Configure the Game Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-a-client">Starting a Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-two-ais">Starting Two AIs</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="game.html">The Game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="game.html#game-overview">Game Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#game-objective">Game Objective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turns">Turns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#end-game">End Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#map-items-power-ups">Map Items &amp; Power-ups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#board-layout">Board Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#walls">Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#players">Players</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#shooting">Shooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turrets">Turrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#power-ups">Power-ups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-laser">Power-up: Laser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-shield">Power-up: Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-teleport">Power-up: Teleport</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controls.html">Controlling Your Player</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#human-players">Human Players</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-1-controls">Player 1 Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-2-controls">Player 2 Controls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#ai-players">AI Players</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">How the Competition is Structured</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submissions">Submissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#grading-scheme">Grading Scheme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#outcome-score">Outcome score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bonus-score">Bonus score</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hitting-the-opponent">Hitting the opponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#killing-a-turret">Killing a turret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#collecting-a-power-up">Collecting a power up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remaining-time-bonus">Remaining Time Bonus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#travel-bonus-per-square">Travel Bonus Per Square</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#competition-format">Competition Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qualifying">Qualifying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#round-robin-finals">Round Robin Finals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithm-and-code-review">Algorithm and Code Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#presentations">Presentations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replay System</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="javaapi.html">Java API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">The Orbis Challenge 2015</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>How the Competition is Structured</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/challenge.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="how-the-competition-is-structured">
+<h1>How the Competition is Structured<a class="headerlink" href="#how-the-competition-is-structured" title="Permalink to this headline">¶</a></h1>
+<p>Here is where you can find information on how to do well in the Challenge.</p>
+<div class="section" id="submissions">
+<h2>Submissions<a class="headerlink" href="#submissions" title="Permalink to this headline">¶</a></h2>
+<p>Follow the following steps when you are ready to submit your submission.</p>
+<ol class="arabic simple">
+<li>Make sure all your source code and external libraries inside botplayer are zipped up</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">To ensure your AI works correctly, included in the package is a validator. Rename your zip to &#8216;botplayer&#8217; with the filetype as &#8216;.zip&#8217; and put it into the folder &#8216;Test&#8217;. Run &#8216;UnzipSubmissions.py&#8217; then &#8216;Tester.py&#8217; with python or run &#8216;validate.bat&#8217; or &#8216;validate.sh&#8217;. If your AI appears in the game, then your AI will work in the grader!</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>We only accept .zip files that are under 5 MB in size.</li>
+<li>The libraries that came in the development kits will be replaced when grading, so feel free to exclude them when creating your archive.</li>
+<li>Include any custom libraries that you use</li>
+</ul>
+</div>
+<ol class="arabic simple" start="2">
+<li>Upload your newly created archives on &#8216;Submit your AI&#8217; on your dashboard on The Challenge website. If you are working in a group of 2, only one of you have to upload it.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You&#8217;re welcome to submit more than once, but only your latest submission before the submission deadline will be graded, so make sure that one works!</p>
+</div>
+</div>
+<div class="section" id="grading-scheme">
+<h2>Grading Scheme<a class="headerlink" href="#grading-scheme" title="Permalink to this headline">¶</a></h2>
+<p>Each submission&#8217;s grade is the sum of their outcome score  and their bonus score.</p>
+<p>Scores are calculated at the end of the game, and logged in an Json file when the match is completed.</p>
+<div class="section" id="outcome-score">
+<h3>Outcome score<a class="headerlink" href="#outcome-score" title="Permalink to this headline">¶</a></h3>
+<p>The outcome score of a game differs depending on whether you won, lost or tied the game. Points are awarded as follows:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="91%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Win (Your Opponent Dies)</td>
+<td>2500</td>
+</tr>
+<tr class="row-even"><td>Tie (Either you both die or no one dies)</td>
+<td>1000</td>
+</tr>
+<tr class="row-odd"><td>Loss (Your AI dies)</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Here a win is defined as your opponent dying and a loss is defined as your AI dying. A tie occurs when both players kill each other on the same turn or the game reaches the maximum turn limit.</p>
+</div>
+<div class="section" id="bonus-score">
+<h3>Bonus score<a class="headerlink" href="#bonus-score" title="Permalink to this headline">¶</a></h3>
+<p>Bonus points are awarded for killing turrets, hitting your opponent, collecting power ups, having turns remaining at
+the end of the game, and moving.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="68%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Hitting the opponent</td>
+<td>750</td>
+</tr>
+<tr class="row-even"><td>Killing a turret</td>
+<td>500</td>
+</tr>
+<tr class="row-odd"><td>Collecting a power up</td>
+<td>200</td>
+</tr>
+<tr class="row-even"><td>Remaining Time Bonus</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>Travel Bonus Per Square</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="hitting-the-opponent">
+<h4>Hitting the opponent<a class="headerlink" href="#hitting-the-opponent" title="Permalink to this headline">¶</a></h4>
+<p>If you are able to damage your opponent or reflect your opponent&#8217;s laser, you get 750 points for each time this is accomplished. Note that if your opponent has a shield on, no points are allocated for hitting them.</p>
+</div>
+<div class="section" id="killing-a-turret">
+<h4>Killing a turret<a class="headerlink" href="#killing-a-turret" title="Permalink to this headline">¶</a></h4>
+<p>If you kill a turret, whether by using a power up or shooting it, you get 500 points. If both you and your opponent kill the turret on the same turn, the score is split and you each get 250 points.</p>
+</div>
+<div class="section" id="collecting-a-power-up">
+<h4>Collecting a power up<a class="headerlink" href="#collecting-a-power-up" title="Permalink to this headline">¶</a></h4>
+<p>For every power up collected, 200 points are given.</p>
+</div>
+<div class="section" id="remaining-time-bonus">
+<h4>Remaining Time Bonus<a class="headerlink" href="#remaining-time-bonus" title="Permalink to this headline">¶</a></h4>
+<p>For every turn remaining after one player eliminates the other player, 2 points are added to the winner per remaining turn.
+For example, if a game with a maximum turn limit of 150 ends on turn 50, 100 turns are left giving the winner of the game 200 extra points.</p>
+</div>
+<div class="section" id="travel-bonus-per-square">
+<h4>Travel Bonus Per Square<a class="headerlink" href="#travel-bonus-per-square" title="Permalink to this headline">¶</a></h4>
+<p>For every square you travel (including squares you have already visited) you get 1 point. Other moves (such as turning or shooting) do not get this movement bonus.</p>
+</div>
+</div>
+</div>
+<div class="section" id="competition-format">
+<h2>Competition Format<a class="headerlink" href="#competition-format" title="Permalink to this headline">¶</a></h2>
+<p>Grading is split into two parts.  There are 3 qualifying rounds against increasingly difficult AIs. If your AI beats all 3 AIs that we will be providing and scores in the top 20 submissions in the contest, it moves on to the round robin.</p>
+<p>The top 20 from the preliminaries will move to the last round, where they&#8217;ll be playing against each other. The top 10 AIs will be chosen for code review in which the top 5 spots are to give a short presentation about their AI. The winners will be determined based on both their performance in the top 20, code review, and presentation.</p>
+<div class="section" id="settings">
+<h3>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h3>
+<p>All games will be played using the following settings:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Minimum board size of 5, maximum board size of 21</li>
+<li>Maximum amount of time to make a move of 250 milliseconds</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="qualifying">
+<h3>Qualifying<a class="headerlink" href="#qualifying" title="Permalink to this headline">¶</a></h3>
+<p>In this round your submission will play against 3 opponents of various difficulties.</p>
+<p>First up is a 2-round match against <strong>The Born Loser</strong>. As its name suggests, this AI is very easily killed.</p>
+<p>Second up is a 3-round match against <strong>The Rookie</strong>. It&#8217;s a bit smarter than The Born Loser, but it won&#8217;t be putting much of a fight.</p>
+<p>Finally, you play a 2-round match against <strong>The Contender</strong>. This will demarcate the truly strong entries.</p>
+</div>
+<div class="section" id="round-robin-finals">
+<h3>Round Robin Finals<a class="headerlink" href="#round-robin-finals" title="Permalink to this headline">¶</a></h3>
+<p>Suppose your submission made it to the top 20. Congratulations! There are 19 other players here with you, so it&#8217;s time to battle it out. You&#8217;ll be playing a 3-round match against each opponent on various maps, it&#8217;s time to show them who&#8217;s the boss!</p>
+</div>
+<div class="section" id="algorithm-and-code-review">
+<h3>Algorithm and Code Review<a class="headerlink" href="#algorithm-and-code-review" title="Permalink to this headline">¶</a></h3>
+<p>Congratulations! Your AI have proven they are one of the best, but how&#8217;s the quality and algorithm of the code? Be sure to make your code as readable as possible and leave some comments for the code reviewers to read!</p>
+</div>
+<div class="section" id="presentations">
+<h3>Presentations<a class="headerlink" href="#presentations" title="Permalink to this headline">¶</a></h3>
+<p>Not only do you have to code well, you should also be able to communicate your ideas fluently. The teams that have their submissions land in the top 5 after the playoffs and code review are asked to give a short presentation to talk about the problems they faced, and how they overcame them.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="replay.html" class="btn btn-neutral float-right" title="Replay System" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="controls.html" class="btn btn-neutral" title="Controlling your Player" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Orbis Investment Management Limited..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

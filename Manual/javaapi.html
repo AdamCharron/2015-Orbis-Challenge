@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Java API &mdash; The Orbis Challenge 2015 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="The Orbis Challenge 2015 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="Python API" href="pythonapi.html"/>
+        <link rel="prev" title="Replay System" href="replay.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> The Orbis Challenge 2015
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="quick.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#before-you-start-set-up">Before you start (Set Up)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#java-required">Java (Required)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#python-optional-only-if-you-want-to-program-your-ai-in-python">Python (Optional - only if you want to program your AI in Python)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#running-the-game-with-the-sample-ai">Running the Game with the sample AI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick.html#linux-mac">Linux/Mac</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick.html#available-resources">Available Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="javaide.html">Configuring your IDE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#eclipse-recommended">Eclipse (recommended)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#set-up">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#starting-game">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#intellij">IntelliJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id1">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id2">Starting Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="javaide.html#bluej">BlueJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id3">Set Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javaide.html#id4">Starting Game</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Command Line Arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-the-server">Starting the Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#how-to-configure-the-game-server">How to Configure the Game Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-a-client">Starting a Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#starting-two-ais">Starting Two AIs</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="game.html">The Game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="game.html#game-overview">Game Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#game-objective">Game Objective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turns">Turns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#end-game">End Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#map-items-power-ups">Map Items &amp; Power-ups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#board-layout">Board Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#walls">Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#players">Players</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#shooting">Shooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#turrets">Turrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#power-ups">Power-ups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-laser">Power-up: Laser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-shield">Power-up: Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#power-up-teleport">Power-up: Teleport</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controls.html">Controlling Your Player</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#human-players">Human Players</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-1-controls">Player 1 Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controls.html#player-2-controls">Player 2 Controls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controls.html#ai-players">AI Players</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">How the Competition is Structured</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#submissions">Submissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#grading-scheme">Grading Scheme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#outcome-score">Outcome score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#bonus-score">Bonus score</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#hitting-the-opponent">Hitting the opponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#killing-a-turret">Killing a turret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#collecting-a-power-up">Collecting a power up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#remaining-time-bonus">Remaining Time Bonus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="challenge.html#travel-bonus-per-square">Travel Bonus Per Square</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="challenge.html#competition-format">Competition Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#settings">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#qualifying">Qualifying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#round-robin-finals">Round Robin Finals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#algorithm-and-code-review">Algorithm and Code Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenge.html#presentations">Presentations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replay System</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Java API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#questions">Questions?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#the-players">The Players</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#what-to-return">What To Return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonapi.html#questions">Questions?</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">The Orbis Challenge 2015</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Java API</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/javaapi.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="java-api">
+<h1>Java API<a class="headerlink" href="#java-api" title="Permalink to this headline">¶</a></h1>
+<p>All of the available information regarding the game is provided to the getMove method in PlayerAI.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Don&#8217;t change the function definition for getMove. This function is called by the client code (which you also shouldn&#8217;t modify) because when you submit your file only your PlayerAI file and any additional libraries are kept and any client code is removed. Thus, if you change the method, your code will cause an Exception and ultimately invalidate all of your work.</p>
+</div>
+<div class="section" id="the-game-map">
+<h2>The Game Map<a class="headerlink" href="#the-game-map" title="Permalink to this headline">¶</a></h2>
+<p>The game map is represented as a 2D array and is accessible through the gameboard variable that is passed as a parameter to getMove. The board is represented as a 2D array and each tile has an associated Cartesian coordinate with the top left tile being (0, 0).</p>
+<div class="figure align-center">
+<img alt="_images/Intro.png" src="_images/Intro.png" />
+</div>
+<div class="highlight-java"><div class="highlight"><pre><span class="c1">//Some sample code with gameboard with the above gameboard</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">gameboard</span><span class="o">.</span><span class="na">getWidth</span><span class="o">()</span> <span class="o">==</span> <span class="mi">13</span><span class="o">);</span> <span class="c1">//true</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">gameboard</span><span class="o">.</span><span class="na">getHeight</span><span class="o">()</span> <span class="o">==</span> <span class="o">);</span> <span class="c1">//false</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getPowerUps</span><span class="o">();</span> <span class="c1">//Gets a list of power ups</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">gameboard</span><span class="o">.</span><span class="na">getPowerUps</span><span class="o">().</span><span class="na">size</span><span class="o">()</span> <span class="o">==</span> <span class="mi">5</span><span class="o">);</span> <span class="c1">//true</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getTurnsRemaining</span><span class="o">();</span> <span class="c1">// Gets turns remaining in the game</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getCurrentTurnNumber</span><span class="o">();</span> <span class="c1">// Gets the current turn number</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getBullets</span><span class="o">();</span> <span class="c1">// Gets an ArrayList of Bullet Objects on the board</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getTurrets</span><span class="o">();</span> <span class="c1">// Gets an ArrayList of Turret objects on the board</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getWalls</span><span class="o">();</span> <span class="c1">// Gets an ArrayList of Wall objects on the board</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getTeleportLocations</span><span class="o">();</span> <span class="c1">// Gets an ArrayList of Points of teleport locations</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">isPowerUpAtTile</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span> <span class="c1">//false</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">isPowerUpAtTile</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span><span class="mi">7</span><span class="o">);</span> <span class="c1">//true</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">areBulletsAtTile</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span> <span class="c1">//false</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">isWallAtTile</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span> <span class="c1">//false</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">isWallAtTile</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span> <span class="c1">//true</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getPowerUpAtTile</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span><span class="mi">7</span><span class="o">);</span> <span class="c1">//Gets the teleport power up at (6,7)</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getPowerUpAtTile</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span> <span class="c1">//Throws NoItemException</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getTeleportLocations</span> <span class="o">();</span> <span class="c1">//Gets a list of points in order of the teleport locations</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getPowerUps</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getPowerUpType</span><span class="o">();</span> <span class="c1">//Gets the powerUpType of the first power up</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">gameboard</span><span class="o">.</span><span class="na">isTurretAtTile</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">5</span><span class="o">)){</span>
+        <span class="n">gameboard</span><span class="o">.</span><span class="na">getTurretAtTile</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="na">didFire</span><span class="o">();</span> <span class="c1">//Checks if the turret fired at the beginning of this turn</span>
+        <span class="n">gameboard</span><span class="o">.</span><span class="na">getTurretAtTile</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="na">isFiringNextTurn</span><span class="o">();</span> <span class="c1">//Checks if it is going to fire</span>
+        <span class="n">gameboard</span><span class="o">.</span><span class="na">getTurretAtTile</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="na">getFireTime</span><span class="o">();</span> <span class="c1">// Get the fire time</span>
+        <span class="n">gameboard</span><span class="o">.</span><span class="na">getTurretAtTile</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">5</span><span class="o">).</span><span class="na">getCooldownTime</span><span class="o">();</span> <span class="c1">// Get cooldown time</span>
+<span class="o">}</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">gameboard</span><span class="o">.</span><span class="na">getPowerUpAtTile</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span> <span class="mi">7</span><span class="o">).</span><span class="na">getPowerUpType</span><span class="o">()</span> <span class="o">==</span> <span class="n">PowerUpTypes</span><span class="o">.</span><span class="na">SHIELD</span><span class="o">);</span> <span class="c1">//false</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">gameboard</span><span class="o">.</span><span class="na">getPowerUpAtTile</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span> <span class="mi">7</span><span class="o">).</span><span class="na">getPowerUpType</span><span class="o">()</span> <span class="o">==</span> <span class="n">PowerUpTypes</span><span class="o">.</span><span class="na">TELEPORT</span><span class="o">);</span> <span class="c1">//true</span>
+
+<span class="c1">// And if there were bullets on the field</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getBullets</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getDirection</span><span class="o">();</span> <span class="c1">// Gets the direction the bullet is travelling</span>
+<span class="n">gameboard</span><span class="o">.</span><span class="na">getBullets</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getShooter</span><span class="o">();</span> <span class="c1">// Get the shooter of the bullet</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you try getting an item that doesn&#8217;t exist on a square (i.e gameboard.getPowerUpAtTile(0,0)) it will throw a NoItemException.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you try to query a location outside the map boundaries (such as gameboard.getTurretAtTile(-1,-1)), you&#8217;ll get a MapOutOfBoundsException.</p>
+</div>
+</div>
+<div class="section" id="the-players">
+<h2>The Players<a class="headerlink" href="#the-players" title="Permalink to this headline">¶</a></h2>
+<p>Your player is represented by the player object while the opponent is represented as the opponent object.</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="c1">//Some sample code with the above gameboard</span>
+<span class="c1">//Player class</span>
+<span class="n">player</span><span class="o">.</span><span class="na">getX</span><span class="o">();</span> <span class="c1">//Gets x-coordinate</span>
+<span class="n">player</span><span class="o">.</span><span class="na">getY</span><span class="o">();</span> <span class="c1">//Gets y-coordinate</span>
+<span class="n">player</span><span class="o">.</span><span class="na">getLaserCount</span><span class="o">();</span> <span class="c1">//The number of laser power ups the player has in their inventory</span>
+<span class="n">player</span><span class="o">.</span><span class="na">getTeleportCount</span><span class="o">();</span> <span class="c1">//The number of teleport power ups the player has in their inventory</span>
+<span class="n">player</span><span class="o">.</span><span class="na">getShieldCount</span><span class="o">();</span> <span class="c1">//The number of shield power ups the player has in their inventory</span>
+<span class="n">player</span><span class="o">.</span><span class="na">getShooters</span><span class="o">();</span> <span class="c1">//Gets an ArrayList of all the shooters</span>
+                      <span class="c1">//from last turn which corresponds with shotByProjectileTypes</span>
+                      <span class="c1">//object is null if shot by turret</span>
+<span class="n">player</span><span class="o">.</span><span class="na">shotByProjectileTypes</span><span class="o">();</span> <span class="c1">//Gets an ArrayList of all the projectiles, they are Enum of either LASER or BULLET</span>
+<span class="n">player</span><span class="o">.</span><span class="na">wasHit</span><span class="o">();</span> <span class="c1">//Get if they were hit last turn</span>
+<span class="n">player</span><span class="o">.</span><span class="na">isShieldActive</span><span class="o">();</span> <span class="c1">//Gets if the player shield is active this turn</span>
+<span class="n">player</span><span class="o">.</span><span class="na">getHP</span><span class="o">();</span> <span class="c1">//Gets the hp of the player</span>
+<span class="n">player</span><span class="o">.</span><span class="na">getScore</span><span class="o">();</span> <span class="c1">// Gets the score of the player</span>
+<span class="n">player</span><span class="o">.</span><span class="na">getDirection</span><span class="o">();</span> <span class="c1">// Gets the direction of the player</span>
+
+<span class="c1">//Opponent class</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">getX</span><span class="o">();</span> <span class="c1">//Gets x-coordinate</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">getY</span><span class="o">();</span> <span class="c1">//Gets y-coordinate</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">isShieldActive</span><span class="o">();</span> <span class="c1">//Gets if the opponent shield is active this turn</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">getHP</span><span class="o">();</span> <span class="c1">//Gets the HP of the opponent</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">getScore</span><span class="o">();</span> <span class="c1">//Gets the score of the opponent</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">getLastMove</span><span class="o">();</span>         <span class="c1">//Gets what Enum Move the opponent made last turn</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">getDirection</span><span class="o">();</span> <span class="c1">// Gets the direction the opponent is facing</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">getLaserCount</span><span class="o">();</span> <span class="c1">//The number of laser power ups the opponent has in their inventory</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">getTeleportCount</span><span class="o">();</span> <span class="c1">//The number of teleport power ups the opponent has in their inventory</span>
+<span class="n">opponent</span><span class="o">.</span><span class="na">getShieldCount</span><span class="o">();</span> <span class="c1">//The number of shield power ups the opponent has in their inventory</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="what-to-return">
+<h2>What To Return<a class="headerlink" href="#what-to-return" title="Permalink to this headline">¶</a></h2>
+<p>getMove returns a Move. Here they are listed for your convenience. For more information check out: <a class="reference internal" href="controls.html"><em>Controlling your Player</em></a></p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">Move</span><span class="o">.</span><span class="na">FACE_UP</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">FACE_DOWN</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">FACE_LEFT</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">FACE_RIGHT</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">NONE</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">SHOOT</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">FORWARD</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">SHIELD</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">LASER</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">TELEPORT_0</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">TELEPORT_1</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">TELEPORT_2</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">TELEPORT_3</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">TELEPORT_4</span>
+<span class="n">Move</span><span class="o">.</span><span class="na">TELEPORT_5</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For detailed documentation, please refer to the Javadocs located in the starter kit.</p>
+</div>
+</div>
+<div class="section" id="questions">
+<h2>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+<p>Contact us at <a class="reference external" href="mailto:challenge&#37;&#52;&#48;orbis&#46;com">challenge<span>&#64;</span>orbis<span>&#46;</span>com</a></p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pythonapi.html" class="btn btn-neutral float-right" title="Python API" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="replay.html" class="btn btn-neutral" title="Replay System" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Orbis Investment Management Limited..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
